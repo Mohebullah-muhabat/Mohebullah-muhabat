@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhebullah Muhabat | Portfolio</title>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg-light: #f3f4f6;
+      --bg-dark: #121212;
+      --text-light: #1e293b;
+      --text-dark: #e0e0e0;
+      --card-bg-light: white;
+      --card-bg-dark: #1e1e1e;
+      --highlight: #00d1b2;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      margin: 0;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: #0d1117;
+      color: white;
+      text-align: center;
+      padding: 2rem 0 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a i {
+      margin-right: 6px;
+    }
+
+    nav a:hover {
+      color: var(--highlight);
+    }
+
+    .dark-toggle {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 8px 16px;
+      background: var(--highlight);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .dark-toggle:hover {
+      background: #009e87;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    section:nth-of-type(2) { animation-delay: 0.2s; }
+    section:nth-of-type(3) { animation-delay: 0.4s; }
+    section:nth-of-type(4) { animation-delay: 0.6s; }
+
+    .card {
+      background: var(--card-bg-light);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      transition: transform 0.3s, background 0.3s, color 0.3s;
+    }
+
+    body.dark-mode .card {
+      background: var(--card-bg-dark);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    h1, h2, h3 {
+      color: inherit;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: var(--highlight);
+    }
+
+    footer {
+      background: #0d1117;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 60px;
+    }
+
+    /* Unique Section Backgrounds */
+    #home {
+      background: linear-gradient(to right, #c3f5ff, #e0f7fa);
+    }
+
+    #about {
+      background: linear-gradient(to right, #fceabb, #f8b500);
+    }
+
+    #projects {
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+    }
+
+    #contact {
+      background: linear-gradient(to right, #d9a7c7, #fffcdc);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--highlight);
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .button:hover {
+      background: #009e87;
+      transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Muhebullah Muhabat</h1>
+    <p>Software Engineer | Front-End Web Developer</p>
+    <nav>
+      <a href="#home"><i class="fas fa-home"></i>Home</a>
+      <a href="#about"><i class="fas fa-user"></i>About</a>
+      <a href="#projects"><i class="fas fa-code"></i>Projects</a>
+      <a href="#contact"><i class="fas fa-envelope"></i>Contact</a>
+    </nav>
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+  </header>
+
+  <!-- Home -->
+  <section id="home">
+    <div class="card">
+      <h2>Welcome</h2>
+      <p>Hello! I'm Muhebullah, a Software Engineer passionate about building responsive and beautiful websites using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. Scroll down to explore more about me and my work.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I graduated from Bost University in 2025 with a degree in Software Engineering. I specialize in web technologies and have strong typing skills in Pashto and English.</p>
+      <h3>Experience</h3>
+      <ul>
+        <li>Applied as a <strong>Manager</strong> at <strong>Helmand Touristy Company</strong> — aiming to improve digital tourism services and website experience.</li>
+        <li>Worked as Technical Staff and Editor at Zhagh Radio.</li>
+        <li>Completed a 6-month Journalism course in Nangarhar in 2023.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="card">
+      <h2>Projects</h2>
+      <h3>Personal Portfolio</h3>
+      <p>
+        Personal Portfolio Website: Built with HTML, CSS, and JavaScript to showcase my skills, experience, and contact info in a clean, responsive layout.</p>
+
+<P>Business Website  Designed and developed a fully functional site for a local business, including custom themes, SEO optimization, and contact forms.</P>
+
+<p>News Blog Front-End: Created a modern blog layout using HTML, Tailwind CSS, and JavaScript, focusing on responsiveness and user experience
+      </p>
+      <a class="button" href="#contact">Hire Me</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="card">
+      <h2>Contact Me</h2>
+      <p><strong>Email:</strong> <a href="mailto:mmuhabat76@gmail.com">mmuhabat76@gmail.com</a></p>
+      <p><strong>Phone:</strong> 0703549207</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/muhibullah-muhabat-71833b329" target="_blank">View Profile</a></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Muhebullah Muhabat — All Rights Reserved
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+
+</body>
+</html>
+
+
